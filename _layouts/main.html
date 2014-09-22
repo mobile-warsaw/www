@@ -8,6 +8,7 @@ main_en:
     Mobile Warsaw is a community of mobile programmers. We organize regular meetings,
     where mobile developers talk to mobile developers about their experiences.
   sponsor: Sponsor
+  official_sponsor: Official sponsor
   support: Support
 
 main_pl:
@@ -19,6 +20,7 @@ main_pl:
     Mobile Warsaw to społeczność programistów mobilnych. Organizujemy regularne spotkania,
     na którym inżynierowie mobilni opowiadają innym inżynierom mobilnym o swoich doświadczeniach.
   sponsor: Sponsor
+  official_sponsor: Oficjalny sponsor
   support: Wsparcie
 ---
 {% if page.language == 'en' %}
@@ -162,6 +164,18 @@ main_pl:
             <li><a href="http://macoscope.net/" target="_blank"><img src="{{ page.root }}img/macoscope.png" alt=""></a></li>
             <li><a href="http://www.futuremind.com/" target="_blank"><img src="{{ page.root }}img/fm.png" alt=""></a></li>
         </ul>
+        {% if page.official_sponsor %}
+            <ul class="pull-left unstyled inline ">
+                <div class="footer-heading">{{main_lang.official_sponsor}}</div>
+                {% for official_sponsor in page.official_sponsor %}
+                <li>
+                    <a href="{{ official_sponsor.url }}" target="_blank">
+                        <img src="{{ page.root }}{{ official_sponsor.logo }}" alt="" class="supporters">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         {% if page.supporters %}
             <ul class="pull-right unstyled inline ">
                 <div class="footer-heading">{{main_lang.support}}</div>
