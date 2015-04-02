@@ -28,10 +28,10 @@ meeting_pl:
 {% assign next_meetup_no = page.meetup_no | plus: 1 %}
 
 {% for some_page in site.pages %}
-    {% if some_page.meetup_no == prev_meetup_no and some_page.language == page.language and some_page.meetup_type == page.meetup_type %}
+    {% if some_page.meetup_no == prev_meetup_no and some_page.meetup_type == page.meetup_type %}
         {% assign prev_meeting_url = some_page.url %}
     {% endif %}
-    {% if some_page.meetup_no == next_meetup_no and some_page.language == page.language and some_page.meetup_type == page.meetup_type %}
+    {% if some_page.meetup_no == next_meetup_no and some_page.meetup_type == page.meetup_type %}
         {% assign next_meeting_url = some_page.url %}
     {% endif %}
 {% endfor %}
@@ -91,7 +91,7 @@ meeting_pl:
                             <img src="{{ page.root }}{{ speaker.photo }}" alt="" class="pull-{{ align }} speaker-photo">
                             <div class="media-body participant-desc text-{{ align }}">
                                 <strong>{{ speaker.name }}</strong><br/>
-                                <em>{{ speaker.description }}</em>
+                                <em>{{ speaker.description | markdownify }}</em>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ meeting_pl:
                             <img src="{{ page.root }}{{ speaker.photo }}" alt="" class="pull-{{ align }} speaker-photo">
                             <div class="media-body participant-desc text-{{ align }}">
                                 <strong>{{ speaker.name }}</strong><br/>
-                                <em>{{ speaker.description }}</em>
+                                <em>{{ speaker.description | markdownify }}</em>
                             </div>
                         </div>
                     </div>
