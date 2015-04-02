@@ -10,16 +10,6 @@ meeting_en:
     past_meetup_text: "Participated"
     future_meetup_text: "Join the meetup"
     meetup_name: "Meetup"
-
-meeting_pl:
-    text_prev_meeting: "poprzednie spotkanie"
-    text_next_meeting: "następne spotkanie"
-    place_head_text: "Czas i miejsce"
-    past_text_participate: "Wystąpili"
-    future_text_participate: "Wystąpią"
-    past_meetup_text: "Wzięli udział"
-    future_meetup_text: "Dołącz do wydarzenia"
-    meetup_name: "Spotkanie"
 ---
 
 {% assign meeting_lang = page.meeting_en %}
@@ -122,46 +112,48 @@ meeting_pl:
     <h2 class="place_inner">{{ meeting_lang.place_head_text }}</h2>
 </div>
 
-<div class="row place-row place-row-single-meetup">
-    <div class="offset1 span5">
-        <ul class="unstyled event-list">
-            {% for event in page.agenda %}
-            <li>
-                <span class="pull-left">{{ event.time_span }}</span>
-                <p>{{ event.title }}<small>{{ event.subtitle }}</small></p>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class="container">
+    <div class="row place-row place-row-single-meetup">
+        <div class="offset1 span5">
+            <ul class="unstyled event-list">
+                {% for event in page.agenda %}
+                <li>
+                    <span class="pull-left">{{ event.time_span }}</span>
+                    <p>{{ event.title }}<small>{{ event.subtitle }}</small></p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-    <div class="span5">
-        <div class="row">
-            <div class="span2">
-                <address>
-                    <strong>{{ page.place_name }}</strong><br/>
-                    {{ page.place_address }}
-                </address>
-            </div><!--span-->
-            <div class="span3" style="text-align: right">
-                <address>
-                    <strong>{{ page.date }}</strong><br/>
-                    {{ page.start_time }}
-                </address>
-            </div>
-        </div><!--row-->
-        <div class="row" style="overflow: hidden;">
-            <div class="span5">
-                <iframe width="100%"
-                        height="256"
-                        frameborder="0"
-                        scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
-                       src="{{ page.place_gmaps_url }}"
-                        ></iframe>
-            </div>
-        </div><!--row-->
-    </div><!--span-5-->
+        <div class="span5">
+            <div class="row">
+                <div class="span2">
+                    <address>
+                        <strong>{{ page.place_name }}</strong><br/>
+                        {{ page.place_address }}
+                    </address>
+                </div><!--span-->
+                <div class="span3" style="text-align: right">
+                    <address>
+                        <strong>{{ page.date }}</strong><br/>
+                        {{ page.start_time }}
+                    </address>
+                </div>
+            </div><!--row-->
+            <div class="row" style="overflow: hidden;">
+                <div class="span5">
+                    <iframe width="100%"
+                            height="256"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                           src="{{ page.place_gmaps_url }}"
+                            ></iframe>
+                </div>
+            </div><!--row-->
+        </div><!--span-5-->
+    </div>
 </div>
 
 <div class>
@@ -194,11 +186,12 @@ meeting_pl:
     {% endfor %}
 </div>
 
-<div class="row place-row place-row-single-meetup">
-    <div class="offset1 span5">
+<div class="container">
+    <div class="row place-row place-row-single-meetup">
+        <div class="offset1 span5">
+        </div>
+        <div class="span5">
+            <a href="{{ page.meetup_link }}" class="join pull-right" target="_blank">{{ meetup_text }}</a>
+        </div><!--span-5-->
     </div>
-
-    <div class="span5">
-        <a href="{{ page.meetup_link }}" class="join pull-right" target="_blank">{{ meetup_text }}</a>
-    </div><!--span-5-->
 </div>
