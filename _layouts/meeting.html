@@ -22,11 +22,7 @@ meeting_pl:
     meetup_name: "Spotkanie"
 ---
 
-{% if page.language == 'en' %}
-    {% assign meeting_lang = page.meeting_en %}
-{% else %}
-    {% assign meeting_lang = page.meeting_pl %}
-{% endif %}
+{% assign meeting_lang = page.meeting_en %}
 
 {% assign prev_meetup_no = page.meetup_no | minus: 1 %}
 {% assign next_meetup_no = page.meetup_no | plus: 1 %}

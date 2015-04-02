@@ -82,11 +82,8 @@ index_pl:
         Jeśli chcesz zaprezentować się na jednym z wyjazdów - wypełnij
 ---
 
-{% if page.language == 'en' %}
-  {% assign index_lang = page.index_en %}
-{% else %}
-  {% assign index_lang = page.index_pl %}
-{% endif %}
+
+{% assign index_lang = page.index_en %}
 
 {% assign already_printed_upcoming_header = false %}
 {% assign highest_past_meetup_no = 0 %}

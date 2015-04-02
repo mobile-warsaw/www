@@ -1,6 +1,5 @@
 ---
 main_en:
-  other_version_text: "Wersja polska"
   organizers_text: "Organizers"
   main_text: Mobile Warsaw
   ontour_text: ON TOUR
@@ -10,24 +9,8 @@ main_en:
   sponsor: Sponsor
   official_sponsor: Official sponsors
   support: Support
-
-main_pl:
-  other_version_text: "English version"
-  organizers_text: "Organizatorzy"
-  main_text: Mobile Warsaw
-  ontour_text: ON TOUR
-  description: |
-    Mobile Warsaw to społeczność programistów mobilnych. Organizujemy regularne spotkania,
-    na którym inżynierowie mobilni opowiadają innym inżynierom mobilnym o swoich doświadczeniach.
-  sponsor: Sponsor
-  official_sponsor: Oficjalni sponsorzy
-  support: Wsparcie
 ---
-{% if page.language == 'en' %}
-    {% assign main_lang = page.main_en %}
-{% else %}
-    {% assign main_lang = page.main_pl %}
-{% endif %}
+{% assign main_lang = page.main_en %}
 
 {% for some_page in site.pages %}
     {% if some_page.meetup_no == page.meetup_no and some_page.meetup_type == page.meetup_type and some_page.language != page.language %}
@@ -88,17 +71,9 @@ main_pl:
                 <div class="span5">
                     <h1>
                         {% if page.meetup_type == 'normal' %}
-                            {% if page.language == 'en' %}
                                 <a href="/index.html" class="brand"><img src="../img/logo.png" alt="Mobile Warsaw"></a>
-                            {% else %}
-                                <a href="/index_pl.html" class="brand"><img src="../img/logo.png" alt="Mobile Warsaw"></a>
-                            {% endif %}
                         {% else %}
-                            {% if page.language == 'en' %}
                                 <a href="index.html" class="brand"><img src="../img/logo_ontour.png" alt="Mobile Warsaw on tour"></a>
-                            {% else %}
-                                <a href="index_pl.html" class="brand"><img src="../img/logo_ontour.png" alt="Mobile Warsaw on tour"></a>
-                            {% endif %}
                         {% endif %}
                     </h1>
                 </div>
@@ -108,23 +83,14 @@ main_pl:
                         <li>
                             {% if page.is_index %}
                                 {% if page.meetup_type == 'normal' %}
-                                    {% if page.language == 'en' %}
                                         <a href="on_tour/index.html" class="ontour">{{ main_lang.ontour_text }}</a>
-                                    {% else %}
-                                        <a href="on_tour/index_pl.html" class="ontour">{{ main_lang.ontour_text }}</a>
-                                    {% endif %}
                                 {% else %}
-                                    {% if page.language == 'en' %}
                                         <a href="../index.html" class="ontour">{{ main_lang.main_text }}</a>
-                                    {% else %}
-                                        <a href="../index_pl.html" class="ontour">{{ main_lang.main_text }}</a>
-                                    {% endif %}
                                 {% endif %}
                             {% else %}
                                <span class="top-date">{{ page.date }}</span>
                             {% endif %}
                         </li>
-                        <li><a href="{{ other_language_url }}" >{{main_lang.other_version_text}}</a></li>
                     </ul>
                 </div>
 
