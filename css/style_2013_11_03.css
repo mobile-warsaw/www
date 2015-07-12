@@ -6,7 +6,6 @@
          url('../fonts/aller_bd-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -18,7 +17,6 @@
          url('../fonts/aller_rg-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -201,7 +199,19 @@ footer.navbar-fixed-bottom {
  @media (min-width: 768px) and (max-width: 979px) {
  .media-body { clear: both; padding-top: 15px!important;}
 
-  }
+}
+
+.sociallinks img {
+  vertical-align: bottom;
+}
+
+.sociallinks a:link{
+    color: white;
+}
+
+.sociallinks a:visited{
+    color: white;
+}
 
 .speaker-photo {
     width: 105px;

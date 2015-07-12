@@ -12,12 +12,6 @@ main_en:
 ---
 {% assign main_lang = page.main_en %}
 
-{% for some_page in site.pages %}
-    {% if some_page.meetup_no == page.meetup_no and some_page.meetup_type == page.meetup_type and some_page.language != page.language %}
-        {% assign other_language_url = some_page.url %}
-    {% endif %}
-{% endfor %}
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -95,13 +89,13 @@ main_en:
                     </ul>
                 </div>
 
-                <div class="span5">
+                <div class="span5 sociallinks">
                     <ul class="inline unstyled pull-right">
-                        <li><a href="http://www.meetup.com/Mobile-Warsaw/" rel="publisher"><img src="../img/meet_up.png" alt=""></a></li>
-                        <li class="gplus"><a href="https://plus.google.com/114703594903107902174" rel="publisher"><img src="../img/gplus.png" alt=""></a></li>
-                        <li><a class="facebook" href="https://www.facebook.com/MobileWarsaw" target="_blank"><img src="../img/fb.png" alt=""></a></li>
-                        <li><a href="https://twitter.com/MobileWarsaw" target="_blank"><img src="../img/twit.png" alt="" ></a></li>
-                        <li><a href="http://mobile-warsaw.pl/slack" target="_blank"><img src="../img/slack.png" alt="" ></a></li>
+                        <li><a href="https://plus.google.com/114703594903107902174" rel="publisher"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                        <li><a href="http://www.meetup.com/Mobile-Warsaw/" rel="publisher"><img src="../img/Meetup-icon.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/MobileWarsaw" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                        <li><a href="https://twitter.com/MobileWarsaw" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li><a href="http://mobile-warsaw.pl/slack" target="_blank"><i class="fa fa-slack fa-2x"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -178,5 +172,6 @@ main_en:
     ga('send', 'pageview');
 
 </script>
+<script type="text/javascript" src="/scripts/retina.min.js"></script>
 </body>
 </html>
