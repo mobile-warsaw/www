@@ -33,11 +33,19 @@ main_en:
     <meta name="twitter:image" content="http://mobile-warsaw.pl/img/logo_mw.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>{{ page.title }}</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.3/jquery.backstretch.min.js"></script>
+
+    <script src="{{ page.root }}js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{ page.root }}css/bootstrap-theme.css">
+
     <link rel="stylesheet" href="{{ page.root }}css/font-awesome-4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ page.root }}css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ page.root }}css/bootstrap-responsive.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.3/jquery.backstretch.min.js"></script>
+    <link rel="stylesheet" href="{{ page.root }}css/bootstrap-theme.css">
+
     <script type="text/javascript">
         $(document).ready(function(){
 
@@ -55,60 +63,47 @@ main_en:
     </script>
     <link rel="stylesheet" href="{{ page.root }}css/style_2013_11_03.css">
 </head>
+
 <body>
 
-
-
-<div id="wrap">
-    <div class="top">
-        <div class="container">
-            <div class="row">
-                <div class="span5">
-                    <h1>
-                        {% if page.meetup_type == 'normal' %}
-                                <a href="/index.html" class="brand"><img src="../img/logo.png" alt="Mobile Warsaw"></a>
-                        {% else %}
-                                <a href="index.html" class="brand"><img src="../img/logo_ontour.png" alt="Mobile Warsaw on tour"></a>
-                        {% endif %}
-                    </h1>
-                </div>
-
-                <div class="span2">
-                    <ul class="inline unstyled">
-                        <li>
-                            {% if page.is_index %}
-                                {% if page.meetup_type == 'normal' %}
-                                        <a href="on_tour/index.html" class="ontour">{{ main_lang.ontour_text }}</a>
-                                {% else %}
-                                        <a href="../index.html" class="ontour">{{ main_lang.main_text }}</a>
-                                {% endif %}
-                            {% else %}
-                               <span class="top-date">{{ page.date }}</span>
-                            {% endif %}
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="span5 sociallinks">
-                    <ul class="inline unstyled pull-right">
-                        <li><a href="http://www.meetup.com/Mobile-Warsaw/" rel="publisher"><img src="../img/Meetup-icon.png" alt=""></a></li>
-                        <li><a href="https://www.facebook.com/MobileWarsaw" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                        <li><a href="https://twitter.com/MobileWarsaw" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-                        <li><a href="http://mobile-warsaw.pl/slack" target="_blank"><i class="fa fa-slack fa-2x"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ page_root }}/index.html">
+        <img alt="Mobile Warsaw" src="../img/logo.png">
+      </a>
     </div>
 
-    <div class="content">
-        <div class="container">
-            {{ content }}
-        </div>
-    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ page_root }}/on_tour/index.html">On Tour</a></li>
+        <li><a href="{{ page.root }}/code_of_conduct.html">Code of Conduct</a></li>
+        <li><a href="{{ page.root }}/about.html">About</a></li>
 
+      </ul>
+      <ul class="nav navbar-nav navbar-right navbar-social">
+        <li><a href="http://www.meetup.com/Mobile-Warsaw/" rel="publisher"><img src="../img/Meetup-icon.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/MobileWarsaw" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://twitter.com/MobileWarsaw" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+        <li><a href="http://mobile-warsaw.pl/slack" target="_blank"><i class="fa fa-slack fa-2x"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-    <div id="push"></div>
+<div class="container-fluid">
+  <div class="content">
+    {{ content }}
+  </div>
+  <div id="push"></div>
 </div>
 
 <footer class="navbar navbar-fixed-bottom">

@@ -8,8 +8,6 @@ index_en:
   how_does_it_work_text: "How does it work?"
   proposal_form_text: "proposal form"
   partners_text: "Partners"
-  jetbrains_text: "At every meetup you have a chance to win two JetBrains tools licences."
-  go_to_meetup_text: "More info"
   previous_meetings_text: "Previous meetups"
   meetup_name: "Meetup"
   who_we_are_text: "Who we are?"
@@ -41,45 +39,6 @@ index_en:
         developers meetups throughout other cities in Poland.
     propose_talk_description: |
         If you wish to present on one of our tours - please fill the
-index_pl:
-  upcoming_text: "Najbliższe spotkania"
-  established_text: "Mobile Warsaw powstało w kwietniu 2013."
-  how_does_it_work_text: "Jak działamy ?"
-  proposal_form_text: "formularz"
-  partners_text: "Partnerzy"
-  jetbrains_text: "Na każdym spotkaniu można wygrać dwie licencje narzędzi firmy JetBrains!"
-  go_to_meetup_text: "Więcej informacji"
-  previous_meetings_text: "Poprzednie spotkania"
-  meetup_name: "Spotkanie"
-  who_we_are_text: "Kim jesteśmy?"
-  about_text: "O nas"
-  propose_talk_header_text: "Zaproponuj prezentację"
-  normal_description_texts:
-    how_does_it_work_description: |
-        Spotykamy się raz w miesiącu w jednym z Warszawskich pubów (każde spotkanie odbywa się w innym miejscu).
-        <br/><br/>
-        Spotkanie rozpoczyna się prezentacjami - głównie inżynierów, passionatów, liderów społeczności programistów,
-        producentów narzędzi, liderów technologicznych, ...
-        <br/><br/>
-        Póżniej do późna w nocy jedna z ważniejszych części spotkania - czyli 'networking'.
-    who_we_are_description: |
-        Mobile Warsaw to społeczność programistów mobilnych. Organizujemy regularne spotkania,
-        na którym inżynierowie mobilni opowiadają innym inżynierom mobilnym o swoich doświadczeniach.
-    propose_talk_description: |
-        Jeśli chcesz zaprezentować się w Warszawskiej społeczności Mobile Warsaw, zaproponować temat - wypełnij
-  ontour_description_texts:
-    how_does_it_work_description: |
-        Spotykamy się nieregularnie w jednym z polskich miast (każde spotkanie odbywa się w innym mieście).
-        <br/><br/>
-        Spotkanie rozpoczyna się prezentacjami - głównie inżynierów, passionatów, liderów społeczności programistów,
-        producentów narzędzi, liderów technologicznych, ...
-        <br/><br/>
-        Póżniej do późna w nocy jedna z ważniejszych części spotkania - czyli 'networking'.
-    who_we_are_description: |
-        Mobile Warsaw on Tour jest nową inicjatywą promującą spotkania developerów aplikacji
-        mobilnych w innych miastach w Polsce.
-    propose_talk_description: |
-        Jeśli chcesz zaprezentować się na jednym z wyjazdów - wypełnij
 ---
 
 
@@ -101,7 +60,7 @@ index_pl:
            {% assign already_printed_upcoming_header = true %}
         {% endif %}
         <div class="row">
-            <div class="offset1 span10 participants-wrap">
+            <div class="span10 participants-wrap">
                 <div class="row place-row">
                     <div class="span10 text-center upcoming-header">
                         <address-index>
@@ -170,7 +129,7 @@ index_pl:
 
                 <div class="row">
                     <div class="span3 pull-right" style="padding-right: 20px;">
-                        <a href="{{ current_meetup.url }}" class="join pull-right" style="margin: 0;">{{ index_lang.go_to_meetup_text }}</a>
+                        <a href="{{ current_meetup.url }}" class="join pull-right" style="margin: 0;">More info</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +143,7 @@ index_pl:
 </div>
 
 <div class="row">
-    <div class="offset1 span10 participants-wrap text-center">
+    <div class="span10 participants-wrap text-center">
         {% for iterator in (1..highest_past_meetup_no) reversed %}
             {% for some_page in site.pages  %}
                 {% if some_page.meetup_no == iterator and some_page.meetup_type == page.meetup_type %}
@@ -219,7 +178,7 @@ index_pl:
 </div>
 
 <div class="row">
-    <div class="offset1 span10 participants-wrap">
+    <div class="span10 participants-wrap">
         <div class="row">
             <div class="span4 offset1">
                 <div class="media">
@@ -247,7 +206,7 @@ index_pl:
 </div>
 
 <div class="row">
-    <div class="offset2 span8 participants-wrap text-center">
+    <div class="span10 participants-wrap text-center">
         <div class="media">
             {{ index_description_lang.propose_talk_description }}
             <a
@@ -265,10 +224,9 @@ index_pl:
 </div>
 
 <div class="row">
-    <div class="offset3 span6 participants-wrap text-center">
+    <div class="col-md-6 col-md-offset-3 participants-wrap text-center">
         <a href="http://www.jetbrains.com/"><img src="/img/logo_jetbrains.gif" style="max-height: 60px;"></a>
-        <br/>{{ index_lang.jetbrains_text }}
+        <br/>At every meetup you have a chance to win one JetBrains tools licences.
     </div>
 </div>
 {% endif %}
-
