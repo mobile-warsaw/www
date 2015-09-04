@@ -21,22 +21,15 @@
 
 
 body {
-    background: url(../img/bg.jpg);
+  background: url(../img/bg.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-y: scroll;
  }
-
-   #wrap { }
 
 .top h1 span { font-size: 12px; color: #fff; position: relative; top:3px; }
 a { color: #fd8700;}
@@ -90,9 +83,6 @@ h2.place_inner {
     font-family: 'allerbold';
 }
 
-.top { background: url(../img/top-bar.png) 0 0 repeat; margin-bottom: 15px;}
-.top .brand { height: 61px;  }
-
 .participants-wrap { background: url(../img/trans.png) 0 0 repeat; }
 
 .content .row {
@@ -101,9 +91,7 @@ h2.place_inner {
   margin-right: auto;
 }
 
-.black-background {}
-
-.participants-wrap { color: #fff; font-size: 13px; line-height: 16px; padding: 10px 0 12px 0; margin-bottom: 25px; margin-left: 0px;}
+.participants-wrap { color: #fff; font-size: 13px; line-height: 16px; padding: 10px 0 12px 0; margin-bottom: 25px;}
 
 .place-row { color: #fff; text-shadow: 0 1px 0px #414141; font-family: 'allerregular'}
 .place-row ul.event-list { text-transform: uppercase; font-size:17px;}
@@ -202,18 +190,6 @@ footer.navbar-fixed-bottom {
  @media (min-width: 768px) and (max-width: 979px) {
  .media-body { clear: both; padding-top: 15px!important;}
 
-}
-
-.sociallinks img {
-  vertical-align: bottom;
-}
-
-.sociallinks a:link{
-    color: white;
-}
-
-.sociallinks a:visited{
-    color: white;
 }
 
 .speaker-photo {
