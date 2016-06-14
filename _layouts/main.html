@@ -127,8 +127,8 @@ main_en:
                 <div class="footer-heading">{{main_lang.official_sponsor}}</div>
                 {% for official_sponsor in page.official_sponsor %}
                 <li>
-                    <a href="{{ official_sponsor.url }}" target="_blank">
-                        <img src="{{ page.root }}{{ official_sponsor.logo }}" alt="" class="supporters">
+                    <a href="{{ official_sponsor.url }}" target="_blank" {{ official_sponsor.additional_parameters }}>
+                        <img src="{{ page.root }}{{ official_sponsor.logo }}" alt="{{ official_sponsor.logo_alt }}" class="supporters">
                     </a>
                 </li>
                 {% endfor %}
