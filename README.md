@@ -19,6 +19,3 @@ If you wish to run Jekyll locally just install the Ruby Gem `gem install jekyll`
 Next, run `jekyll build --watch` in source directory and visit page in just generated `_site` dir.
 Due to `--watch` option in Jekyll the source will be rebuilt on change.
 
-
-
-
