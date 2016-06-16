@@ -102,18 +102,27 @@
         <ul class="pull-left unstyled inline ">
         </ul>
         <div class="clearfix"></div>
-        {% if page.official_sponsor %}
-            <ul class="pull-right unstyled inline ">
-                <div class="footer-heading">Official sponsors</div>
-                {% for official_sponsor in page.official_sponsor %}
+          <ul class="pull-right unstyled inline ">
+                <div class="footer-heading">Official sponsors</div>      
                 <li>
-                    <a href="{{ official_sponsor.url }}" target="_blank" {{ official_sponsor.additional_parameters }}>
-                        <img src="{{ page.root }}{{ official_sponsor.logo }}" alt="{{ official_sponsor.logo_alt }}" class="supporters">
+                    <a href="http://www.thedroidsonroids.com/" target="_blank" rel="dofollow" title="iOS &amp; Android Mobile Development Software House Poland">
+                        <img src="img/sponsors/droids.png" alt="iOS &amp; Android Mobile Development Software House Poland" class="supporters">
                     </a>
                 </li>
-                {% endfor %}
+                
+                <li>
+                    <a href="http://www.mobica.com/careers" target="_blank">
+                        <img src="img/sponsors/mobica_big.png" alt="" class="supporters">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.syncano.io" target="_blank">
+                        <img src="img/sponsors/Syncano.png" alt="" class="supporters">
+                    </a>
+                </li>
+                
             </ul>
-        {% endif %}
         {% if page.supporters %}
             <ul class="pull-right unstyled inline ">
                 <div class="footer-heading">Support</div>
