@@ -2,14 +2,10 @@
 layout: main
 
 meeting_en:
-    text_prev_meeting: "previous meeting"
-    text_next_meeting: "next meeting"
-    place_head_text: "Agenda and venue"
     past_text_participate: "Speakers"
     future_text_participate: "Speakers"
     past_meetup_text: "Participated"
     future_meetup_text: "Join the meetup"
-    meetup_name: "Meetup"
 ---
 
 {% assign meeting_lang = page.meeting_en %}
@@ -35,19 +31,19 @@ meeting_en:
 
 <ul class="inline" style="margin-bottom: 30px;">
     {% if prev_meeting_url != null %}
-    <li><a href="{{prev_meeting_url}}" class="links-to-other-meetings">&laquo; {{ meeting_lang.text_prev_meeting }}</a></li>
+    <li><a href="{{prev_meeting_url}}" class="links-to-other-meetings">&laquo; previous meeting</a></li>
     {% endif %}
     {% if next_meeting_url != null %}
-    <li style="float: right"><a href="{{next_meeting_url}}" class="links-to-other-meetings">{{ meeting_lang.text_next_meeting }} &raquo;</a></li>
+    <li style="float: right"><a href="{{next_meeting_url}}" class="links-to-other-meetings">next meeting &raquo;</a></li>
     {% endif %}
     <li style="float: none">
         <div class="row place-row">
             <div class="span12 text-center upcoming-header">
                 <address-index>
                     {% if page.meetup_type == 'normal' %}
-                        <strong>{{ meeting_lang.meetup_name }} #{{page.meetup_no}}</strong>
+                        <strong>Meetup #{{page.meetup_no}}</strong>
                     {% else %}
-                        <strong>{{ meeting_lang.meetup_name }} - {{page.city}}</strong>
+                        <strong>Meetup - {{page.city}}</strong>
                     {% endif %}
                 </address-index>
             </div>
@@ -108,8 +104,8 @@ meeting_en:
 </div>
 
 <div class="place" >
-    <img src="{{ page.root }}img/button-empty.png" alt="{{ meeting_lang.place_head_text }}">
-    <h2 class="place_inner">{{ meeting_lang.place_head_text }}</h2>
+    <img src="{{ page.root }}img/button-empty.png" alt="Agenda and venue">
+    <h2 class="place_inner">Agenda and venue</h2>
 </div>
 
 <div class="container">
