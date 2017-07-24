@@ -102,14 +102,6 @@
         <ul class="pull-left unstyled inline ">
         </ul>
         <div class="clearfix"></div>
-          <ul class="pull-right unstyled inline ">
-                <div class="footer-heading">Official sponsors</div>
-                <li>
-                    <a href="http://www.braintri.com" target="_blank">
-                        <img src="img/sponsors/Braintri.png" alt="" class="supporters">
-                    </a>
-                </li>
-            </ul>
         {% if page.supporters %}
             <ul class="pull-right unstyled inline ">
                 <div class="footer-heading">Support</div>
@@ -124,7 +116,7 @@
         {% endif %}
         {% if page.sponsors %}
             <ul class="pull-right unstyled inline ">
-                <div class="footer-heading">Sponsor</div>
+                <div class="footer-heading">Official Sponsors</div>
                 {% for sponsor in page.sponsors %}
                 <li>
                     <a href="{{ sponsor.url }}" target="_blank">
