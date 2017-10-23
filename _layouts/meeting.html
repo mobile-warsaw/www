@@ -8,7 +8,7 @@ meeting_en:
     future_meetup_text: "Join the meetup"
 ---
 
-{% assign meeting_lang = page.meeting_en %}
+{% assign meeting_lang = layout.meeting_en %}
 
 {% assign prev_meetup_no = page.meetup_no | minus: 1 %}
 {% assign next_meetup_no = page.meetup_no | plus: 1 %}
